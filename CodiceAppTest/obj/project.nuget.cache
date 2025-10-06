@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Qzd8e+Wwv+w=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mlago\\source\\repos\\CodiceApp\\CodiceAppTest\\CodiceAppTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mlago\\.nuget\\packages\\nunit\\4.4.0\\nunit.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
