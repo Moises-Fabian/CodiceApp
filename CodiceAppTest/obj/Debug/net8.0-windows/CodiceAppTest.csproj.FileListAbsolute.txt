@@ -11,6 +11,7 @@ C:\Users\mlago\source\repos\CodiceApp\CodiceAppTest\obj\Debug\net8.0-windows\Cod
 C:\Users\mlago\source\repos\CodiceApp\CodiceAppTest\obj\Debug\net8.0-windows\CodiceAppTest.AssemblyInfoInputs.cache
 C:\Users\mlago\source\repos\CodiceApp\CodiceAppTest\obj\Debug\net8.0-windows\CodiceAppTest.AssemblyInfo.cs
 C:\Users\mlago\source\repos\CodiceApp\CodiceAppTest\obj\Debug\net8.0-windows\CodiceAppTest.csproj.CoreCompileInputs.cache
+C:\Users\mlago\source\repos\CodiceApp\CodiceAppTest\obj\Debug\net8.0-windows\CodiceAppTest.sourcelink.json
 C:\Users\mlago\source\repos\CodiceApp\CodiceAppTest\obj\Debug\net8.0-windows\CodiceAp.DC2DC804.Up2Date
 C:\Users\mlago\source\repos\CodiceApp\CodiceAppTest\obj\Debug\net8.0-windows\CodiceAppTest.dll
 C:\Users\mlago\source\repos\CodiceApp\CodiceAppTest\obj\Debug\net8.0-windows\refint\CodiceAppTest.dll

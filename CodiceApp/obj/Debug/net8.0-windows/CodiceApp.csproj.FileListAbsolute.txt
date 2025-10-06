@@ -10,6 +10,7 @@ C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\CodiceA
 C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\CodiceApp.AssemblyInfoInputs.cache
 C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\CodiceApp.AssemblyInfo.cs
 C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\CodiceApp.csproj.CoreCompileInputs.cache
+C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\CodiceApp.sourcelink.json
 C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\CodiceApp.dll
 C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\refint\CodiceApp.dll
 C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\CodiceApp.pdb
