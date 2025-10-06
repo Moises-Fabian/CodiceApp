@@ -1,6 +1,6 @@
 ﻿using CodiceApp.Modelo.Entidades;
 using CodiceApp.Servicio;
-using CodiceApp.Servicio.Interface; // Necesario para los mocks si los usaras
+using CodiceApp.Servicio.Interface;
 using NUnit.Framework;
 using System.Collections.Generic;    // Necesario para List<T>
 using System.Linq;
@@ -31,8 +31,8 @@ namespace CodiceAppTest
 
             // Assert
             var estudiantes = _estudianteServicio.ObtenerTodos();
-            Assert.That(estudiantes.Count, Is.EqualTo(totalInicial + 1));
-            Assert.That(estudiantes.Any(e => e.Rut == "33-3"), Is.True);
+            NUnit.Framework.Assert.That(estudiantes.Count, Is.EqualTo(totalInicial + 1));
+            NUnit.Framework.Assert.That(estudiantes.Any(e => e.Rut == "33-3"), Is.True);
         }
 
         [Test]
@@ -47,7 +47,7 @@ namespace CodiceAppTest
 
             // Assert
             var estudiante = _estudianteServicio.ObtenerTodos().First(e => e.Rut == rutExistente);
-            Assert.That(estudiante.Nombre, Is.EqualTo("Juanito"));
+            NUnit.Framework.Assert.That(estudiante.Nombre, Is.EqualTo("Juanito"));
         }
 
         [Test]
@@ -62,8 +62,8 @@ namespace CodiceAppTest
 
             // Assert
             var estudiantes = _estudianteServicio.ObtenerTodos();
-            Assert.That(estudiantes.Count, Is.EqualTo(totalInicial - 1));
-            Assert.That(estudiantes.Any(e => e.Rut == rutAEliminar), Is.False);
+            NUnit.Framework.Assert.That(estudiantes.Count, Is.EqualTo(totalInicial - 1));
+            NUnit.Framework.Assert.That(estudiantes.Any(e => e.Rut == rutAEliminar), Is.False);
         }
     }
 }
