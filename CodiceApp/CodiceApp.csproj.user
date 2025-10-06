@@ -4,6 +4,9 @@
     <Compile Update="Vista\Forms\Alumnos\FormEstudiantes.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vista\Forms\Asignaturas\FormAsignaturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vista\Forms\Principal\Principal.cs">
       <SubType>Form</SubType>
     </Compile>

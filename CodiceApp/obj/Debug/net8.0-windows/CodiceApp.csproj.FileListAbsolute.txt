@@ -16,3 +16,4 @@ C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\refint\
 C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\CodiceApp.pdb
 C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\CodiceApp.genruntimeconfig.cache
 C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\ref\CodiceApp.dll
+C:\Users\mlago\source\repos\CodiceApp\CodiceApp\obj\Debug\net8.0-windows\CodiceApp.Vista.Forms.Asignaturas.FormAsignaturas.resources

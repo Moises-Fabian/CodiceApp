@@ -30,7 +30,7 @@
         {
             label1 = new Label();
             btnGestionarEstudiantes = new Button();
-            btn_notas = new Button();
+            btn_asignaturas = new Button();
             btn_calificaciones = new Button();
             btn_informes = new Button();
             SuspendLayout();
@@ -54,14 +54,15 @@
             btnGestionarEstudiantes.UseVisualStyleBackColor = true;
             btnGestionarEstudiantes.Click += btn_alumnos_Click;
             // 
-            // btn_notas
+            // btn_asignaturas
             // 
-            btn_notas.Location = new Point(110, 165);
-            btn_notas.Name = "btn_notas";
-            btn_notas.Size = new Size(163, 29);
-            btn_notas.TabIndex = 2;
-            btn_notas.Text = "Registro Notas";
-            btn_notas.UseVisualStyleBackColor = true;
+            btn_asignaturas.Location = new Point(110, 165);
+            btn_asignaturas.Name = "btn_asignaturas";
+            btn_asignaturas.Size = new Size(163, 29);
+            btn_asignaturas.TabIndex = 2;
+            btn_asignaturas.Text = "Gestión Asignaturas";
+            btn_asignaturas.UseVisualStyleBackColor = true;
+            btn_asignaturas.Click += btn_asignaturas_Click;
             // 
             // btn_calificaciones
             // 
@@ -88,7 +89,7 @@
             ClientSize = new Size(379, 402);
             Controls.Add(btn_informes);
             Controls.Add(btn_calificaciones);
-            Controls.Add(btn_notas);
+            Controls.Add(btn_asignaturas);
             Controls.Add(btnGestionarEstudiantes);
             Controls.Add(label1);
             Name = "Principal";
@@ -101,7 +102,7 @@
 
         private Label label1;
         private Button btnGestionarEstudiantes;
-        private Button btn_notas;
+        private Button btn_asignaturas;
         private Button btn_calificaciones;
         private Button btn_informes;
     }
