@@ -95,9 +95,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(360, 30);
             label3.Name = "label3";
-            label3.Size = new Size(58, 20);
+            label3.Size = new Size(60, 20);
             label3.TabIndex = 6;
-            label3.Text = "Código";
+            label3.Text = "Sección";
             // 
             // label4
             // 
