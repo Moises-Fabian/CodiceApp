@@ -1,6 +1,7 @@
 using CodiceApp.Presentador;
 using CodiceApp.Servicio;
 using CodiceApp.Servicio.Interface;
+using CodiceApp.Vista.Forms;
 using CodiceApp.Vista.Forms.Alumnos;
 using CodiceApp.Vista.Forms.Asignaturas;
 using CodiceApp.Vista.Forms.Asistencia;
@@ -15,6 +16,7 @@ namespace CodiceApp
         private readonly IAsignaturaServicio _asignaturaServicio;
         private readonly IAsistenciaServicio _asistenciaServicio;
         private readonly ICalificacionServicio _calificacionServicio;
+        private readonly ITrabajoServicio _trabajoServicio;
         public Principal()
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace CodiceApp
             _asignaturaServicio = new AsignaturaServicio();
             _asistenciaServicio = new AsistenciaServicio(_estudianteServicio, _asignaturaServicio);
             _calificacionServicio = new CalificacionServicio(_estudianteServicio, _asignaturaServicio);
+            _trabajoServicio = new TrabajoServicio(_estudianteServicio, _asignaturaServicio);
         }
 
         private void btn_alumnos_Click(object sender, EventArgs e)
@@ -50,6 +53,13 @@ namespace CodiceApp
         {
             IAsistenciaVista vista = new FormAsistencia();
             AsistenciaPresentador presentador = new AsistenciaPresentador(vista, _asistenciaServicio, _estudianteServicio, _asignaturaServicio);
+            ((Form)vista).ShowDialog();
+        }
+
+        private void btn_informes_Click(object sender, EventArgs e)
+        {
+            ITrabajoVista vista = new FormTrabajos();
+            TrabajoPresentador presentador = new TrabajoPresentador(vista, _trabajoServicio);
             ((Form)vista).ShowDialog();
         }
     }

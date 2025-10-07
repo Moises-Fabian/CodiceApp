@@ -51,7 +51,7 @@
             btnGestionarEstudiantes.Name = "btnGestionarEstudiantes";
             btnGestionarEstudiantes.Size = new Size(163, 29);
             btnGestionarEstudiantes.TabIndex = 1;
-            btnGestionarEstudiantes.Text = "Gestionar Estudiantes";
+            btnGestionarEstudiantes.Text = "Gestión Estudiantes";
             btnGestionarEstudiantes.UseVisualStyleBackColor = true;
             btnGestionarEstudiantes.Click += btn_alumnos_Click;
             // 
@@ -81,8 +81,9 @@
             btn_informes.Name = "btn_informes";
             btn_informes.Size = new Size(163, 29);
             btn_informes.TabIndex = 4;
-            btn_informes.Text = "Ver Informes";
+            btn_informes.Text = "Gestión Informes";
             btn_informes.UseVisualStyleBackColor = true;
+            btn_informes.Click += btn_informes_Click;
             // 
             // btnGestionarAsistencia
             // 
@@ -90,7 +91,7 @@
             btnGestionarAsistencia.Name = "btnGestionarAsistencia";
             btnGestionarAsistencia.Size = new Size(163, 29);
             btnGestionarAsistencia.TabIndex = 5;
-            btnGestionarAsistencia.Text = "Gestion Asistencia";
+            btnGestionarAsistencia.Text = "Gestión Asistencia";
             btnGestionarAsistencia.UseVisualStyleBackColor = true;
             btnGestionarAsistencia.Click += btnGestionarAsistencia_Click;
             // 

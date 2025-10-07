@@ -189,7 +189,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1237, 598);
+            ClientSize = new Size(1096, 598);
             Controls.Add(label5);
             Controls.Add(txtIdCalificacion);
             Controls.Add(btnEliminar);
