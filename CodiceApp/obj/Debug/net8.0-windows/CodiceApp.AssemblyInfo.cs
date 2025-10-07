@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodiceApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee3b4b804523042f71ac30c9dc1ab14ad01e0ea2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e432a1edc9ceb18a4074027fd3f59d5013de526a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodiceApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodiceApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

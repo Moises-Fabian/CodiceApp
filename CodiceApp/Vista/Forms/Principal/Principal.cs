@@ -3,6 +3,7 @@ using CodiceApp.Servicio;
 using CodiceApp.Servicio.Interface;
 using CodiceApp.Vista.Forms.Alumnos;
 using CodiceApp.Vista.Forms.Asignaturas;
+using CodiceApp.Vista.Forms.Asistencia;
 using CodiceApp.Vista.Interface;
 
 namespace CodiceApp
@@ -11,11 +12,13 @@ namespace CodiceApp
     {
         private readonly IEstudianteServicio _estudianteServicio;
         private readonly IAsignaturaServicio _asignaturaServicio;
+        private readonly IAsistenciaServicio _asistenciaServicio;
         public Principal()
         {
             InitializeComponent();
             _estudianteServicio = new EstudianteServicio();
             _asignaturaServicio = new AsignaturaServicio();
+            _asistenciaServicio = new AsistenciaServicio(_estudianteServicio, _asignaturaServicio);
         }
 
         private void btn_alumnos_Click(object sender, EventArgs e)
@@ -30,6 +33,18 @@ namespace CodiceApp
         {
             IAsignaturaVista vista = new FormAsignaturas();
             AsignaturaPresentador presentador = new AsignaturaPresentador(vista, _asignaturaServicio);
+            ((Form)vista).ShowDialog();
+        }
+
+        private void btn_calificaciones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGestionarAsistencia_Click(object sender, EventArgs e)
+        {
+            IAsistenciaVista vista = new FormAsistencia();
+            AsistenciaPresentador presentador = new AsistenciaPresentador(vista, _asistenciaServicio, _estudianteServicio, _asignaturaServicio);
             ((Form)vista).ShowDialog();
         }
     }

@@ -33,6 +33,7 @@
             btn_asignaturas = new Button();
             btn_calificaciones = new Button();
             btn_informes = new Button();
+            btnGestionarAsistencia = new Button();
             SuspendLayout();
             // 
             // label1
@@ -66,27 +67,39 @@
             // 
             // btn_calificaciones
             // 
-            btn_calificaciones.Location = new Point(110, 200);
+            btn_calificaciones.Location = new Point(110, 245);
             btn_calificaciones.Name = "btn_calificaciones";
             btn_calificaciones.Size = new Size(163, 29);
             btn_calificaciones.TabIndex = 3;
             btn_calificaciones.Text = "Gestion Calificaciones";
             btn_calificaciones.UseVisualStyleBackColor = true;
+            btn_calificaciones.Click += btn_calificaciones_Click;
             // 
             // btn_informes
             // 
-            btn_informes.Location = new Point(110, 235);
+            btn_informes.Location = new Point(110, 280);
             btn_informes.Name = "btn_informes";
             btn_informes.Size = new Size(163, 29);
             btn_informes.TabIndex = 4;
             btn_informes.Text = "Ver Informes";
             btn_informes.UseVisualStyleBackColor = true;
             // 
+            // btnGestionarAsistencia
+            // 
+            btnGestionarAsistencia.Location = new Point(110, 200);
+            btnGestionarAsistencia.Name = "btnGestionarAsistencia";
+            btnGestionarAsistencia.Size = new Size(163, 29);
+            btnGestionarAsistencia.TabIndex = 5;
+            btnGestionarAsistencia.Text = "Gestion Asistencia";
+            btnGestionarAsistencia.UseVisualStyleBackColor = true;
+            btnGestionarAsistencia.Click += btnGestionarAsistencia_Click;
+            // 
             // Principal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(379, 402);
+            Controls.Add(btnGestionarAsistencia);
             Controls.Add(btn_informes);
             Controls.Add(btn_calificaciones);
             Controls.Add(btn_asignaturas);
@@ -105,5 +118,6 @@
         private Button btn_asignaturas;
         private Button btn_calificaciones;
         private Button btn_informes;
+        private Button btnGestionarAsistencia;
     }
 }
