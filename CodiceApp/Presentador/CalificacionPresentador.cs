@@ -16,6 +16,8 @@ namespace CodiceApp.Presentador
             _servicio = servicio;
 
             _vista.CargarCalificaciones += OnCargarCalificaciones;
+            _vista.EditarCalificacion += OnEditarCalificacion;  
+            _vista.EliminarCalificacion += OnEliminarCalificacion;
             _vista.GuardarCalificacion += OnGuardarCalificacion;
             _vista.CalcularPromedio += OnCalcularPromedio;
         }
@@ -58,6 +60,56 @@ namespace CodiceApp.Presentador
             }
         }
 
+        private void OnEditarCalificacion(object sender, EventArgs e)
+        {
+            if (!int.TryParse(_vista.Id, out int id))
+            {
+                _vista.MostrarMensaje("El ID de la calificación a editar no es válido.");
+                return;
+            }
+            if (!decimal.TryParse(_vista.Nota, out decimal nota))
+            {
+                _vista.MostrarMensaje("La nota ingresada no es un número válido.");
+                return;
+            }
+            if (!int.TryParse(_vista.IdAsignatura, out int idAsignatura))
+            {
+                _vista.MostrarMensaje("El ID de la asignatura no es un número válido.");
+                return;
+            }
+
+            try
+            {
+                var calificacionActualizada = new Calificacion
+                {
+                    Id = id,
+                    RutEstudiante = _vista.RutEstudiante,
+                    IdAsignatura = idAsignatura,
+                    Nota = nota,
+                    Fecha = _vista.Fecha
+                };
+
+                _servicio.Editar(calificacionActualizada);
+                _vista.MostrarCalificaciones(_servicio.ObtenerTodas());
+            }
+            catch (Exception ex)
+            {
+                _vista.MostrarMensaje(ex.Message);
+            }
+        }
+
+        private void OnEliminarCalificacion(object sender, EventArgs e)
+        {
+            if (!int.TryParse(_vista.Id, out int id))
+            {
+                _vista.MostrarMensaje("El ID de la calificación a eliminar no es válido.");
+                return;
+            }
+
+            _servicio.Eliminar(id);
+            _vista.MostrarCalificaciones(_servicio.ObtenerTodas());
+        }
+
         private void OnCalcularPromedio(object sender, EventArgs e)
         {
             if (!int.TryParse(_vista.IdAsignatura, out int idAsignatura))
@@ -67,6 +119,15 @@ namespace CodiceApp.Presentador
             }
 
             var promedio = _servicio.CalcularPromedio(_vista.RutEstudiante, idAsignatura);
+
+            if (promedio >= 4.0m)
+            {
+                _vista.SetPromedioColor(Color.Blue);
+            }
+            else
+            {
+                _vista.SetPromedioColor(Color.Red);
+            }
             _vista.Promedio = $"Promedio: {promedio:F2}";
         }
     }

@@ -40,6 +40,10 @@
             btnCalcularPromedio = new Button();
             dataGridViewCalificaciones = new DataGridView();
             lblPromedio = new Label();
+            btnEditar = new Button();
+            btnEliminar = new Button();
+            txtIdCalificacion = new TextBox();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCalificaciones).BeginInit();
             SuspendLayout();
             // 
@@ -130,11 +134,12 @@
             // dataGridViewCalificaciones
             // 
             dataGridViewCalificaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCalificaciones.Location = new Point(49, 145);
+            dataGridViewCalificaciones.Location = new Point(49, 224);
             dataGridViewCalificaciones.Name = "dataGridViewCalificaciones";
             dataGridViewCalificaciones.RowHeadersWidth = 51;
             dataGridViewCalificaciones.Size = new Size(992, 236);
             dataGridViewCalificaciones.TabIndex = 11;
+            dataGridViewCalificaciones.CellClick += dataGridViewCalificaciones_CellClick;
             // 
             // lblPromedio
             // 
@@ -144,11 +149,51 @@
             lblPromedio.Size = new Size(0, 20);
             lblPromedio.TabIndex = 12;
             // 
+            // btnEditar
+            // 
+            btnEditar.Location = new Point(192, 156);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(129, 29);
+            btnEditar.TabIndex = 13;
+            btnEditar.Text = "Editar Nota";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Location = new Point(327, 156);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(129, 29);
+            btnEliminar.TabIndex = 14;
+            btnEliminar.Text = "Eliminar Nota";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
+            // 
+            // txtIdCalificacion
+            // 
+            txtIdCalificacion.Location = new Point(49, 156);
+            txtIdCalificacion.Name = "txtIdCalificacion";
+            txtIdCalificacion.Size = new Size(125, 27);
+            txtIdCalificacion.TabIndex = 15;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(51, 128);
+            label5.Name = "label5";
+            label5.Size = new Size(61, 20);
+            label5.TabIndex = 16;
+            label5.Text = "ID Nota";
+            // 
             // FormCalificaciones
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1237, 450);
+            ClientSize = new Size(1237, 598);
+            Controls.Add(label5);
+            Controls.Add(txtIdCalificacion);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnEditar);
             Controls.Add(lblPromedio);
             Controls.Add(dataGridViewCalificaciones);
             Controls.Add(btnCalcularPromedio);
@@ -183,5 +228,9 @@
         private Button btnCalcularPromedio;
         private DataGridView dataGridViewCalificaciones;
         private Label lblPromedio;
+        private Button btnEditar;
+        private Button btnEliminar;
+        private TextBox txtIdCalificacion;
+        private Label label5;
     }
 }

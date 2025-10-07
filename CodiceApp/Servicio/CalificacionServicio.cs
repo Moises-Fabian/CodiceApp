@@ -36,6 +36,35 @@ namespace CodiceApp.Servicio
             _calificaciones.Add(calificacion);
         }
 
+        public void Editar(Calificacion calificacionActualizada)
+        {
+            var calificacionExistente = _calificaciones.FirstOrDefault(c => c.Id == calificacionActualizada.Id);
+            if (calificacionExistente != null)
+            {
+                var estudiante = _estudianteServicio.ObtenerTodos().FirstOrDefault(e => e.Rut == calificacionActualizada.RutEstudiante);
+                var asignatura = _asignaturaServicio.ObtenerTodas().FirstOrDefault(a => a.Id == calificacionActualizada.IdAsignatura);
+
+                if (estudiante == null) throw new Exception("El estudiante no existe.");
+                if (asignatura == null) throw new Exception("La asignatura no existe.");
+
+                calificacionExistente.RutEstudiante = calificacionActualizada.RutEstudiante;
+                calificacionExistente.IdAsignatura = calificacionActualizada.IdAsignatura;
+                calificacionExistente.Nota = calificacionActualizada.Nota;
+                calificacionExistente.Fecha = calificacionActualizada.Fecha;
+                calificacionExistente.NombreEstudiante = $"{estudiante.Nombre} {estudiante.Apellido}";
+                calificacionExistente.NombreAsignatura = asignatura.Nombre;
+            }
+        }
+
+        public void Eliminar(int id)
+        {
+            var calificacion = _calificaciones.FirstOrDefault(c => c.Id == id);
+            if (calificacion != null)
+            {
+                _calificaciones.Remove(calificacion);
+            }
+        }
+
         public decimal CalcularPromedio(string rutEstudiante, int idAsignatura)
         {
             var notasDelEstudiante = _calificaciones
